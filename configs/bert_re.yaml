@@ -1,0 +1,15 @@
+# Relation classification with BERT + entity markers
+dataset: nyt                # nyt | docred
+data_path: data/nyt/train.json
+max_examples: null
+test_size: 0.2
+seed: 42
+
+model_name: bert-base-uncased
+max_length: 128
+batch_size: 16
+epochs: 5
+learning_rate: 2.0e-5
+warmup_ratio: 0.1
+
+output_dir: outputs/bert_re

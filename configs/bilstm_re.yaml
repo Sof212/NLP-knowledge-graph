@@ -1,0 +1,20 @@
+# Relation classification with a BiLSTM + entity-aware attention
+dataset: docred             # docred | nyt
+data_path: data/docred/train_distant.json
+max_examples: 300000
+docred_fallback: mentions   # context when a relation has no evidence: mentions | document
+test_size: 0.2
+seed: 42
+
+max_len: 120
+min_freq: 1
+embed_dim: 300
+hidden_dim: 512
+num_layers: 3
+dropout: 0.3
+batch_size: 32
+epochs: 10
+learning_rate: 1.0e-3
+class_weights: true
+
+output_dir: outputs/bilstm_re

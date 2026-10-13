@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ner-re"
+version = "0.1.0"
+description = "Named entity recognition and relation extraction: CRF, rule-based knowledge graphs, BERT and BiLSTM classifiers."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn",
+    "pyyaml",
+    "tqdm",
+    "spacy>=3.5",
+    "nltk",
+    "gensim",
+    "networkx",
+    "sklearn-crfsuite",
+    "seqeval",
+    "torch",
+    "transformers",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

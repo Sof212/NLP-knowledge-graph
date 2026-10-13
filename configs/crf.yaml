@@ -1,0 +1,12 @@
+# Kaggle NER dataset (see data/README.md)
+data_path: data/ner_dataset.csv
+max_sentences: null        # e.g. 10000 for a quick run
+test_size: 0.2
+seed: 42
+
+# CRF (CRFsuite L-BFGS)
+c1: 0.0
+c2: 1.0
+max_iterations: 100
+
+output_dir: outputs/crf
